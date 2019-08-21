@@ -5,11 +5,11 @@ import (
 	"net/url"
 
 	"github.com/gomodule/redigo/redis"
-	"github.com/gregjones/httpcache"
-	"github.com/gregjones/httpcache/diskcache"
-	"github.com/gregjones/httpcache/leveldbcache"
-	"github.com/gregjones/httpcache/memcache"
-	httpcacheredis "github.com/gregjones/httpcache/redis"
+	"github.com/twpayne/httpcache"
+	"github.com/twpayne/httpcache/diskcache"
+	"github.com/twpayne/httpcache/leveldbcache"
+	"github.com/twpayne/httpcache/memcache"
+	httpcacheredis "github.com/twpayne/httpcache/redis"
 )
 
 // NewCacheFromURL returns a new httpcache.Cache according the the scheme of
