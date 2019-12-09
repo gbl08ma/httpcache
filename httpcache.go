@@ -537,7 +537,7 @@ type cachingReadCloser struct {
 func (r *cachingReadCloser) Read(p []byte) (n int, err error) {
 	n, err = r.R.Read(p)
 	r.buf.Write(p[:n])
-	if err == io.EOF {
+	if err == io.EOF || err == nil && n < len(p) {
 		r.OnEOF(bytes.NewReader(r.buf.Bytes()))
 	}
 	return n, err
