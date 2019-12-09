@@ -1,4 +1,4 @@
-module github.com/twpayne/httpcache
+module github.com/gbl08ma/httpcache
 
 go 1.12
 
